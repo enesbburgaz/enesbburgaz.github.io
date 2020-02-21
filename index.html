@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enesbburgaz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="tr">
+                <select id="mySelect" class="selectLang" onchange="Lang()">
+                    <option value="1">Turkish</option>
+                    <option value="2">English</option>
+                </select>
+                <h2 class="name">Enes BÜYÜKBURGAZ</h2>
+                <h4 id="title"></h4>
+                <p id="description"></p>
+            </div>
+        </div>
+        <div class="socialMedia">
+            <a href="https://www.linkedin.com/in/enesbburgaz/">Linkedin</a>
+            <a href="https://github.com/enesbburgaz">Github</a>
+            <a href="https://medium.com/@enesbburgaz">Medium</a>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function(){
+    var title = document.getElementById("title").innerHTML = "Yazılım Geliştirici";
+    var description = document.getElementById("description").innerHTML = "Problem çözmeyi ve insanlara yardım etmeyi seviyorum.";
+    }
+    function Lang() {
+        var e = document.getElementById("mySelect").value;
+        if(e == 2){
+            document.getElementById("title").innerHTML = "Software Developer";
+            document.getElementById("description").innerHTML = "I love solving problems and helping people.";
+        }
+        else{
+            document.getElementById("title").innerHTML = "Yazılım Geliştirici";
+            document.getElementById("description").innerHTML = "Problem çözmeyi ve insanlara yardım etmeyi seviyorum.";
+        }
+    }
+</script>
+</html>
