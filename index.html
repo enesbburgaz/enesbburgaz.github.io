@@ -9,39 +9,25 @@
 </head>
 <body>
     <div class="container">
-        <div class="content">
-            <div class="tr">
-                <select id="mySelect" class="selectLang" onchange="Lang()">
-                    <option value="1">Turkish</option>
+        <div class="card">
+            <div class="language">
+                <select id="mySelect" onchange="lanFunction()">
+                    <option value="1" selected>Turkish</option>
                     <option value="2">English</option>
                 </select>
-                <h2 class="name">Enes BÜYÜKBURGAZ</h2>
-                <h4 id="title"></h4>
-                <p id="description"></p>
             </div>
-        </div>
-        <div class="socialMedia">
-            <a href="https://www.linkedin.com/in/enesbburgaz/">Linkedin</a>
-            <a href="https://github.com/enesbburgaz">Github</a>
-            <a href="https://medium.com/@enesbburgaz">Medium</a>
+            <div class="info">
+                <h2 class="name">Enes BÜYÜKBURGAZ</h2>
+                <h4 id="title">Yazılım Geliştirici</h4>
+                <p id="description">Problem çözmeyi ve insanlara yardım etmeyi seviyorum.</p>
+            </div>
+            <div class="social">
+                <a href="https://github.com/enesbburgaz">Github</a>
+                <a href="https://www.linkedin.com/in/enesbburgaz/">Linkedin</a>
+                <a href="https://medium.com/@enesbburgaz">Medium</a>
+            </div>
         </div>
     </div>
 </body>
-<script>
-    window.onload = function(){
-    var title = document.getElementById("title").innerHTML = "Yazılım Geliştirici";
-    var description = document.getElementById("description").innerHTML = "Problem çözmeyi ve insanlara yardım etmeyi seviyorum.";
-    }
-    function Lang() {
-        var e = document.getElementById("mySelect").value;
-        if(e == 2){
-            document.getElementById("title").innerHTML = "Software Developer";
-            document.getElementById("description").innerHTML = "I love solving problems and helping people.";
-        }
-        else{
-            document.getElementById("title").innerHTML = "Yazılım Geliştirici";
-            document.getElementById("description").innerHTML = "Problem çözmeyi ve insanlara yardım etmeyi seviyorum.";
-        }
-    }
-</script>
+<script src="./app.js"></script>
 </html>
